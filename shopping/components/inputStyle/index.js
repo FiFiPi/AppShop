@@ -2,13 +2,15 @@ import { View, Text } from 'react-native'
 import { TextInput } from 'react-native-paper'
 import React, { useState } from 'react'
 import styles from './styles'
-const InputStyle = ({ name, onChange, editable = true }) => {
+import { onChange } from 'react-native-reanimated'
+const InputStyle = ({ name, value, onChange, editable = true }) => {
     let obj = {
         name: name,
         placeholder: `${name}. . .`,
         editable: editable
     }
     const [code, setCode] = useState('')
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{obj.name}</Text>
@@ -20,9 +22,8 @@ const InputStyle = ({ name, onChange, editable = true }) => {
                 style={styles.name}
                 // keyboardType="numeric"
                 editable={obj.editable}
-                value={code}
-                onChangeText={text => setCode(text)}
-
+                value={value}
+                onChangeText={value => onChange(value)}
             />
         </View>
     )

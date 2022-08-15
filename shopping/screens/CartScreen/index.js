@@ -25,7 +25,7 @@ const CartScreen = () => {
     }, [cartItems])
 
     if (cartItems.length <= 0) {
-        return <Text>Không có đơn hàng nào.</Text>
+        return <Text style={styles.empty}>Bạn chưa thêm đơn hàng vào giỏ!</Text>
     }
     handleRender = ({ item }) => {
         return <ProductList item={item} cart />

@@ -4,15 +4,17 @@ import UserService from '../../services/user'
 export const fetchAsyncGetMe = createAsyncThunk(
     'user/fetchAsyncGetMe',
     async (data, thunkAPI) => {
-        const reponse = await UserService.get(data)
-        return reponse.data
+
+        const response = await UserService.get(data)
+        return response.data
     }
 )
 export const fetchAsyncUpdate = createAsyncThunk(
     'user/fetchAsyncUpdate',
     async (data, thunkAPI) => {
-        const reponse = await UserService.update(data)
-        return reponse.data
+
+        const response = await UserService.update(data)
+        return response.data
     }
 )
 const userSlice = createSlice({
@@ -24,6 +26,7 @@ const userSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchAsyncGetMe.fulfilled, (state, action) => {
+
                 return {
                     ...state,
                     info: action.payload

@@ -23,8 +23,8 @@ const InfoCartScreen = () => {
                     setShowCheckCart(true)
                     setItems(res.payload?.order_items)
                 } else {
-                    ShowToast('Sai code "VdlpTlzqyKsfnpji"')
-                    setCode(false)
+                    ShowToast('Vui lòng nhập đúng mã đơn hàng.')
+                    setCode('')
                 }
             })
     }

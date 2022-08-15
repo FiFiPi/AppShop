@@ -4,7 +4,7 @@ import { CheckLogin } from '../../common'
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchAsyncGetMe, fetchAsyncUpdate } from '../../store/slices/user'
-import { ShowToast } from '../../help/ShowToast'
+import ShowToast from '../../help/ShowToast'
 import { MESSAGE } from '../../contains/default'
 import styles from './styles'
 
@@ -13,19 +13,21 @@ const InfoShipScreen = () => {
     const isLogin = useSelector(state => state.Auth.isLogin)
     const [nickname, setNickname] = useState('')
     const [loading, setLoading] = useState(true)
+
     const [objInfo, setObjInfo] = useState({
         name: '',
         email: '',
         phone: '',
         address: ''
     })
+    console.log('objjjjj', objInfo)
     const [isUpdate, setisUpdate] = useState(true)
     useEffect(() => {
-        //  setLoading(true)
+        setLoading(true)
         dispatch(fetchAsyncGetMe())
             .then((res) => {
                 if (!res.error) {
-                    //    setLoading(false)
+                    setLoading(false)
                     setObjInfo({
                         ...objInfo,
                         name: res.payload.name,
@@ -45,8 +47,6 @@ const InfoShipScreen = () => {
                 }
             })
     }
-
-    // console.log('info', info)
     return (
         <>
             {isLogin ? (

@@ -4,19 +4,19 @@ import ProductService from '../../services/product'
 export const fetchProduct = createAsyncThunk(
     'product/fetchProduct',
     async (data, thunkAPI) => {
-        const reponse = await ProductService.list(data)
+        const response = await ProductService.list(data)
         return {
-            ...reponse,
+            ...response,
             name: data.name,
-            data: reponse.data
+            data: response.data
         }
     }
 )
 export const fetchSingleProduct = createAsyncThunk(
     'product/fetchSingleProduct',
     async (data, thunkAPI) => {
-        const reponse = await ProductService.getSingle(data)
-        return reponse.data
+        const response = await ProductService.getSingle(data)
+        return response.data
     }
 )
 const ProductSlice = createSlice({

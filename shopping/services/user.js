@@ -4,7 +4,7 @@ const UserService = {
     get({
         ...restParam
     } = {}) {
-        return api.call().get(`/mobile/auth/me`, {
+        return api.call().get(`/auth/me`, {
             params: {
                 ...restParam
             }

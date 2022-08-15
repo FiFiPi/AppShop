@@ -6,8 +6,8 @@ import { persistReducer } from 'redux-persist'
 export const fetchAsyncLogin = createAsyncThunk(
     'auth/fetchAsyncLogin',
     async (data, thunkAPI) => {
-        const reponse = await AuthService.login(data)
-        return reponse.data
+        const response = await AuthService.login(data)
+        return response.data
     }
 )
 const AuthSlice = createSlice({

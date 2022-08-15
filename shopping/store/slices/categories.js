@@ -4,15 +4,15 @@ import CategoriesServies from '../../services/categories'
 export const fetchCategories = createAsyncThunk(
     'categories/fetchCategories',
     async (data, thunkAPI) => {
-        const reponse = await CategoriesServies.list(data)
-        return reponse.data
+        const response = await CategoriesServies.list(data)
+        return response.data
     }
 )
 export const fetchCategoriesInProduct = createAsyncThunk(
     'categories/fetchCategoriesInProduct',
     async (data, thunkAPI) => {
-        const reponse = await CategoriesServies.listProduct(data)
-        return reponse.data
+        const response = await CategoriesServies.listProduct(data)
+        return response.data
     }
 )
 const categorySlice = createSlice({

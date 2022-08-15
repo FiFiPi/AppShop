@@ -70,6 +70,9 @@ const FavoriteScreen = () => {
             <Product data={item} />
         )
     }
+    if (items.length === 0) {
+        return <Text style={styles.empty}>Bạn chưa chọn sản phẩm yêu thích!</Text>
+    }
     return (
         <View style={styles.container}>
             <FlatList

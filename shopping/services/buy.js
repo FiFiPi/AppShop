@@ -17,7 +17,7 @@ const BuyService = {
         console.log('code', code)
         return api.call().get(`/mobile/orders/${code}`, {
             params: {
-                order_code: code,
+                code,
                 ...restParam
             }
         })

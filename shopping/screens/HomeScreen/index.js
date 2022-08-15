@@ -14,7 +14,7 @@ const HomeScreen = () => {
         const setHeader = async () => {
             try {
                 let token = await AsyncStorage.getItem('access_token')
-                // console.log(token)
+                console.log(token)
                 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
             } catch (e) {
                 console.log(e)

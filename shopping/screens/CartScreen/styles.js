@@ -21,5 +21,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    empty: {
+        fontSize: 20,
+        textAlign: 'center'
+    }
 })
 export default styles
