@@ -15,13 +15,11 @@ const styles = StyleSheet.create({
     },
     box: {
         flexDirection: 'row',
-        marginRight: 15,
-        width: 230,
-
+        marginRight: 1,
     },
     boxCategory: {
-        width: 110,
-        height: 110
+        width: 100,
+        height: 100
     },
     img: {
         width: '100%',
@@ -37,7 +35,7 @@ const styles = StyleSheet.create({
     },
     info: {
         justifyContent: 'space-around',
-        marginLeft: 15,
+        maxWidth: 120
     }
 })
 

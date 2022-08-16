@@ -119,8 +119,8 @@ const ProductScreen = () => {
                                         renderItem={showItems}
                                         keyExtractor={(item) => item.name.toString()}
                                         horizontal={true}
-                                        showsHorizontalScrollIndicator={false}
-                                        showsVerticalScrollIndicator={false}
+                                    // showsHorizontalScrollIndicator={false}
+                                    // showsVerticalScrollIndicator={false}
                                     />
                                 </View>
                             </View>
